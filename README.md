@@ -1,6 +1,11 @@
-# DiscordBotCLIPlugin
-Send commands to MC client using Discord.
+<p align="center"> <b> DiscordBotCLI </b> </p>
 
-This is a plugin for Wurst-2 client.
+<p align="center"> <b> TODO: </b> </p>
+<p> Fix and clean up the plugin. </p>
+<p> Fix AuthManagement error . </p>
+<p> Add API to create Discord commands from other plugins. </p>
 
-Incomplete.
+<details>
+<summary> Libs: </summary>
+<p> <a href="https://github.com/Javacord/Javacord"> 1.Javacord developed by the Discord community. </a> </p>
+</details>
