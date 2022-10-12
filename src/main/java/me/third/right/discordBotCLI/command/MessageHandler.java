@@ -96,6 +96,15 @@ public class MessageHandler implements MessageCreateListener {
     }
 
     /**
+     * Register a new Discord command.
+     * @param cmd The command to register.
+     */
+    public void registerCmd(Cmd cmd) {
+        if(cmdList.contains(cmd)) return;
+        cmdList.add(cmd);
+    }
+
+    /**
      * Checks the Authors ID whether they have perms to use the given command.
      */
     public boolean canUseCommand(final long id, Cmd command) {
@@ -104,7 +113,17 @@ public class MessageHandler implements MessageCreateListener {
                 || user != null && user.getSecond().getPowerLevel() >= command.getAuthority().getPowerLevel();
     }
 
+    /**
+     * Gets the command by class.
+     * @param cmd Command Class.
+     * @return Command instance.
+     */
     public Cmd getCommand(Class<Cmd> cmd) {return getCommand(cmd.getName());}
+    /**
+     * Gets the command by name.
+     * @param name Command name.
+     * @return Command instance.
+     */
     public Cmd getCommand(String name) {
         for(Cmd c : cmdList) {
             for(String s : c.getName()) {
@@ -114,6 +133,10 @@ public class MessageHandler implements MessageCreateListener {
         return null;
     }
 
+    /**
+     * Gets the command list.
+     * @return Command list.
+     */
     public LinkedHashSet<Cmd> getCmdList() {
         return cmdList;
     }
