@@ -1,6 +1,7 @@
 package me.third.right.discordBotCLI.hacks;
 
 import me.third.right.ThirdMod;
+import me.third.right.discordBotCLI.Main;
 import me.third.right.discordBotCLI.command.MessageHandler;
 import me.third.right.discordBotCLI.managers.AuthManagement;
 import me.third.right.discordBotCLI.managers.ChatForwardingManager;
@@ -10,6 +11,7 @@ import me.third.right.settings.setting.CheckboxSetting;
 import me.third.right.settings.setting.EnumSetting;
 import me.third.right.settings.setting.StringSetting;
 import me.third.right.utils.client.enums.Category;
+import me.third.right.utils.client.manage.PresentCheckerCache;
 import me.third.right.utils.client.objects.Pair;
 import me.third.right.utils.client.utils.ChatUtils;
 import me.third.right.utils.client.utils.FileUtils;
@@ -17,6 +19,7 @@ import me.third.right.utils.client.utils.LoggerUtils;
 import me.third.right.utils.client.utils.MathUtils;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
+import org.javacord.api.entity.activity.ActivityType;
 
 import java.nio.file.Path;
 
@@ -91,6 +94,7 @@ public class DiscordBotCLI extends Hack {
         } else LoggerUtils.moduleLog(this, "OwnerID is not a valid, ignoring.");
 
         api = new DiscordApiBuilder().setToken(tokenString).login().join();
+        api.updateActivity(ActivityType.CUSTOM, ThirdMod.NAME + " " + ThirdMod.VERSION + " | " + Main.INSTANCE.getName() + " " + Main.INSTANCE.getVersion());
         messageHandler = new MessageHandler();
 
 
@@ -120,15 +124,12 @@ public class DiscordBotCLI extends Hack {
         shutdown();
     }
 
+    //Events
+
     //Methods
 
-    public boolean isPresent() {//TODO create a class todo this so we cache it and don't run a catch each time doing this type of check.
-        try {
-            Class.forName(DiscordApi.class.getName());
-            return true;
-        } catch (NoClassDefFoundError | ClassNotFoundException var1) {
-            return false;
-        }
+    public boolean isPresent() {
+        return PresentCheckerCache.isPresent("org.javacord.api.DiscordApi");
     }
 
     public boolean strictCommandChannel() {
