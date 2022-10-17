@@ -6,7 +6,7 @@ import me.third.right.hud.Hud;
 import me.third.right.modules.Hack;
 import me.third.right.plugins.PluginBase;
 
-@PluginBase.PluginInfo(name = "DiscordBotCLI", author = "ThirdRight")
+@PluginBase.PluginInfo(name = "DiscordBotCLI", author = "ThirdRight", version = "1.1")
 public class Main extends PluginBase {
     public static Main INSTANCE;
 
