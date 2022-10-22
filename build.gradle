@@ -84,9 +84,9 @@ dependencies {
     implementation(files("Libs/WurstMinus-Two-4.4-release.jar"))//This must point to the Wurst-2 Jar
 
     //implementation(files("Libs/JDA-5.0.0-alpha.20-withDependencies.jar")) //'org.javacord:javacord:3.5.0'
-    compile(files("Libs/javacord-api-3.3.2.jar"))
-    compile(files("Libs/javacord-core-3.3.2.jar"))
-    compile(files("Libs/javacord-3.3.2-shaded.jar"))
+    compile(files("Libs/javacord-api-3.4.0.jar"))
+    compile(files("Libs/javacord-core-3.4.0.jar"))
+    compile(files("Libs/javacord-3.4.0-shaded.jar"))
 }
 
 processResources {
@@ -136,7 +136,8 @@ jar {
     manifest {
         attributes(
                 'Main': 'me.third.right.discordBotCLI.Main',
-                'Mixin': ''
+                'Mixin': '',
+                'TargetVersion': '4.4',
         )
     }
 }

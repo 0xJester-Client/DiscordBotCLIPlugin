@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71904ee0-803f-4d57-9c69-c9e77a77a07e" name="Changes" comment="Latest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/third/right/discordBotCLI/command/commands/ConnectCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/third/right/discordBotCLI/command/commands/DisconnectCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/third/right/discordBotCLI/command/commands/ServerCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/third/right/discordBotCLI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/third/right/discordBotCLI/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665646550326</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Latest">
+      <created>1666034779338</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666034779338</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
